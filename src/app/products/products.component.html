@@ -1,0 +1,46 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <input class="p-1" [(ngModel)] ="appstate.ProductState.keyword"  type="text">
+        <button (click)="serchProducts()"  class="btn btn-outline-success ms-1"><i class="bi bi-search"></i></button>
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>PRICE</th><th>CHECKED</th>
+        </tr>
+        </thead>
+        <tbody *ngIf="appstate.ProductState.products">
+        <tr *ngFor="let p of appstate.ProductState.products">
+          <th>{{p.id}}</th>
+          <th>{{p.name}}</th>
+          <th>{{p.price}}</th>
+          <th>
+            <button (click)="handleCheckProduct(p)" class="btn btn-outline-success" >
+              <i [class]="p.checked ? 'bi bi-check':'bi bi-circle'"></i>
+            </button>
+          </th>
+          <th>
+            <button (click)="deleteProduct(p)" class="btn btn-outline-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </th>
+          <th>
+            <button (click)="handleEdit(p)" class="btn btn-outline-success">
+              <i class="bi bi-pencil"></i>
+            </button>
+          </th>
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills">
+        <li *ngFor="let page of [].constructor(this.appstate.ProductState.totalPages); let i=index">
+          <button (click)="handleGoToPage(i+1)" [ngClass]="appstate.ProductState.currentPage==(i+1) ?'btn btn-success m-1':'btn btn-outline-success m-1'" >
+            {{i+1}}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.btn-outline-success:not(.active):hover, .btn-outline-success:not(.active):focus {
+  background-color: #e6ffe6;
+  border-color: #adebad;
+}
+
+.btn-success.active {
+  box-shadow: inset 0 3px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Transition for the icon change */
+i {
+  transition: transform 0.3s ease;
+}
+
+.btn-success .bi-check-lg {
+  color: #fff; /* White icon for visibility on green button */
+}
+
+.btn-outline-success .bi-circle, .btn-outline-success .bi-check-lg {
+  color: #28a745; /* Bootstrap success green */
+}

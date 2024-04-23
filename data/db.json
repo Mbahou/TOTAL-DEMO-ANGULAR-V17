@@ -1,0 +1,48 @@
+
+{
+  "users" : [
+    {"username": "user1",
+      "password": "1234",
+      "roles" : ["USER"],
+      "token" : "jwt"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "hp i7",
+      "price": "4500",
+      "checked": true
+    },git init,
+    {
+      "name": "apple-watch",
+      "price": "3000",
+      "checked": true,
+      "id": 2
+    },
+    {
+      "name": "apple-watch",
+      "price": "3000",
+      "checked": true,
+      "id": 3
+    },
+    {
+      "name": "apple-watch",
+      "price": "3000",
+      "checked": true,
+      "id": 4
+    },
+    {
+      "name": "apple-watch",
+      "price": "3000",
+      "checked": true,
+      "id": 5
+    },
+    {
+      "name": "apple-watch",
+      "price": "3000",
+      "checked": true,
+      "id": 6
+    }
+  ]
+}

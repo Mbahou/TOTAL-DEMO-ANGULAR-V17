@@ -1,0 +1,20 @@
+<div class="p-3">
+  <ul class="nav nav-pills">
+    <li>
+      <button (click)="goToHome()"
+              [ngClass]="currentRoute=='home'? 'btn btn-danger ms-2' : 'btn btn-outline-primary ms-2'">Home</button>
+    </li>
+    <li>
+      <button (click)="goToProducts()"
+              [ngClass]="currentRoute=='products'? 'btn btn-danger ms-2' : 'btn btn-outline-primary ms-2'">Products</button>
+    </li>
+    <li>
+      <button (click)="goToNewProducts()"
+              [ngClass]="currentRoute=='newProducts'? 'btn btn-danger ms-2' : 'btn btn-outline-primary ms-2'">New Products</button>
+    </li>
+    <li *ngIf="loadingService.isLoading$ | async">
+      <div class="spinner-border text-primary ms-2" role="status">
+      </div>
+    </li>
+  </ul>
+</div>
